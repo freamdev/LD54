@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,7 @@ public class UISliderManager : MonoBehaviour
     public Slider Slider => slider;
 
     [SerializeField] Image foreground;
+    [SerializeField] TextMeshProUGUI sliderName;
 
     private void Awake()
     {
@@ -18,5 +20,10 @@ public class UISliderManager : MonoBehaviour
     public void SetForegroundColor(Color color)
     {
         foreground.color = color;
+    }
+
+    public void SetSliderName(string name)
+    {
+        sliderName.text = name;
     }
 }
