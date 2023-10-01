@@ -25,12 +25,14 @@ public class SpaceshipUIController : MonoBehaviour
         foreach(var module in equippedModuleButtons)
         {
             module.GetComponentInChildren<TextMeshProUGUI>().text = "empty";
+            module.GetComponent<Image>().sprite = null;
             module.GetComponent<Button>().onClick.RemoveAllListeners();
         }
 
         foreach(var module in modules.Select((item, index) => (item, index)))
         {
             var equippedModule = equippedModuleButtons[module.index];
+            equippedModule.GetComponent<Image>().sprite = module.item.ModuleIcon;
             equippedModule.GetComponentInChildren<TextMeshProUGUI>().text = module.item.ModuleName;
             equippedModule.GetComponent<Button>().onClick.AddListener(() =>
             {

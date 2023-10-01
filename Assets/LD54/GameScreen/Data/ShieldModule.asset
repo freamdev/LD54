@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShieldModule
   m_EditorClassIdentifier: 
   ModuleName: Shield
-  ModuleIcon: {fileID: 0}
+  ModuleIcon: {fileID: 21300000, guid: ed5f1ea1dd4895841beb3fd9ec68a02f, type: 3}
   ModuleModel: {fileID: 0}
   PowerDrain: -12
   rechargeRate: 3

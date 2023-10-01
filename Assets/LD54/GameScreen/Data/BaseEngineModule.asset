@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: BaseEngineModule
   m_EditorClassIdentifier: 
   ModuleName: Engine module
-  ModuleIcon: {fileID: 0}
+  ModuleIcon: {fileID: 21300000, guid: e8ea03b7f526e1c41a4585cc63545334, type: 3}
   ModuleModel: {fileID: 0}
   PowerDrain: -3
-  SpeedIncrease: 15
+  SpeedIncrease: 25
+  VelocityIncrease: 4

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: SolarPanelModule
   m_EditorClassIdentifier: 
   ModuleName: Solar panel
-  ModuleIcon: {fileID: 0}
+  ModuleIcon: {fileID: 21300000, guid: 482a5830c3e6aa84492f2b2993258015, type: 3}
   ModuleModel: {fileID: 0}
   PowerDrain: 6

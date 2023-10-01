@@ -12,6 +12,7 @@ public class SpacehipAttribute
     float value;
     public PowerType PowerType => powerType;
     public float Normalized => value / maxValue;
+    public float Value => value;
 
 
     public void Initialize()
@@ -22,5 +23,10 @@ public class SpacehipAttribute
     public void Effect(float v)
     {
         value = Mathf.Max(0, Mathf.Min(value + v, maxValue));
+    }
+
+    public void EffectMax(float v)
+    {
+        maxValue = Mathf.Max(0, maxValue + v);
     }
 }

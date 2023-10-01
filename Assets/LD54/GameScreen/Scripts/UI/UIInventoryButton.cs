@@ -17,6 +17,8 @@ public class UIInventoryButton : MonoBehaviour
             ship.AddModule(Instantiate(spaceshipModule));
         });
 
+        GetComponent<Image>().sprite = module.ModuleIcon;
+
         GetComponentInChildren<TextMeshProUGUI>()
             .text = spaceshipModule.ModuleName;
     }

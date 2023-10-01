@@ -9,7 +9,11 @@ public class ShieldModule : SpaceshipModuleBase
 
     public override void UpdateModule(Spaceship ship)
     {
-        ship.GetAttribute(PowerType.Shield).Effect(rechargeRate * Time.deltaTime);
-        ship.GetAttribute(PowerType.Power).Effect(PowerDrain * Time.deltaTime);
+        var cost = PowerDrain * Time.deltaTime;
+        if (ship.GetAttribute(PowerType.Power).Value > -cost)
+        {
+            ship.GetAttribute(PowerType.Shield).Effect(rechargeRate * Time.deltaTime);
+            ship.GetAttribute(PowerType.Power).Effect(cost);
+        }
     }
 }
